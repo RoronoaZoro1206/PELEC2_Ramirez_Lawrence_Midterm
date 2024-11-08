@@ -1,0 +1,659 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #080808;
+    color: #fff;
+}
+
+
+.violet-background {
+    background-color:#8F00FF;
+    color: #080808; 
+}
+
+
+#Home:target ~ body,
+#Services:target ~ body,
+#Portfolio:target ~ body,
+#Contact:target ~ body {
+    background-color: #8F00FF;
+    color: #081b29;
+}
+
+
+#header {
+    width: 100%;
+    height: 100vh;
+    background-image: url("Images/ramirezBackground.png"); 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    background-position: center; 
+}
+
+
+.logo {
+    max-width: 300px; 
+    height: auto;    
+    display: block;  
+    margin-right: 20px; 
+}
+
+.logo-wrapper {
+    position: relative;
+    max-width: 300px;
+    display: inline-block;
+    margin-left: 7.5%;
+}
+
+
+.skill-photo {
+    width: 350px; 
+    height: 550px; 
+    object-fit: cover; 
+    border-radius: 10px; 
+    display: block;
+    margin-right: 20px;
+}
+
+.logo-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #080808;
+    animation: showRight 1s ease forwards;
+    animation-delay: 0.4s;
+    z-index: 1;
+}
+
+.container {
+    padding: 10px 10%;
+    padding-top: 80px;
+}
+
+.container2 {
+    padding: 10px 10%;
+    padding-top: 80px;
+    justify-content: center;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+    flex-wrap: wrap; 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    background-color: rgba(8, 8, 8, 0.8); 
+    z-index: 1000; 
+    padding: 10px 20px; 
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    outline: none
+}
+
+nav ul li a:focus {
+    color: #8F00FF;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #8F00FF;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s ease;
+}
+
+nav ul li a:hover::after,
+nav ul li a:focus::after {
+    width: 100%;
+}
+
+.header-text {
+    margin-top: 10%;
+    font-size: 25px;
+
+}
+
+.header-text h1 {
+    font-size: 50px;
+    margin-top: 35px;
+    line-height: 1.2;
+}
+
+.header-text p {
+    font-size: 25px;
+    margin-top: 15px;
+    text-align: justify;
+}
+
+
+.header-text h1 span {
+    color: #8F00FF;
+}
+
+.header-text h3 span {
+    color: #8F00FF;
+}
+
+.header-text .btn-box {
+    position: relative;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between; 
+    width: 400px; 
+}
+
+.header-text .btn-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #080808;
+    animation: showRight 1s ease forwards;
+    animation-delay: 0.5s;
+    z-index: 2;
+}
+
+.btn-box a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #8F00FF; 
+    border-radius: 8px;
+    font-size: 19px;
+    color: #8F00FF; 
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .7s ease;
+}
+
+.btn-box a.focused {
+    background: #8F00FF; 
+    color: #080808;
+}
+
+.btn-box a:nth-child(1) {
+    background: #080808;
+    color: #8F00FF;
+}
+
+.btn-box a:nth-child(1):hover,
+.btn-box a:nth-child(1):focus {
+    background: #8F00FF; 
+    color: #080808; 
+    outline: none; 
+}
+
+.btn-box a:nth-child(2) {
+    background: #080808; 
+    color: #8F00FF; 
+}
+
+.btn-box a:nth-child(2):hover,
+.btn-box a:nth-child(2):focus {
+    background: #8F00FF; 
+    color: #080808; 
+    outline: none; 
+}
+
+.btn-box a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0; 
+    height: 100%;
+    background: #8F00FF; 
+    z-index: -1;
+    transition: .7s ease;
+}
+
+.btn-box a:hover::before,
+.btn-box a:focus::before { 
+    width: 100%;
+}
+
+.btn-box a:focus {
+    background: #8F00FF; 
+    color: #080808;
+}
+
+
+.home-icons {
+    position: absolute;
+    bottom: 25px; 
+    width: 200px;
+    display: flex; 
+    justify-content: space-between; 
+}
+
+.home-icons::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #080808;
+    animation: showRight 1s ease forwards;
+    animation-delay: 0.5s;
+    z-index: 2;
+}
+
+.home-icons a {
+    position: relative;
+    display: inline-flex; 
+    justify-content: center;
+    align-items: center; 
+    width: 40px; 
+    height: 40px; 
+    background: transparent; 
+    border: 2px solid #8F00FF; 
+    border-radius: 50%;
+    font-size: 24px; 
+    color: #8F00FF;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+    transition: 0.5s ease; 
+}
+
+.home-icons a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0; 
+    height: 100%;
+    background: #8F00FF; 
+    z-index: -1;
+    transition: 0.5s ease;
+}
+
+.home-icons a:hover,
+.home-icons a:focus {  
+    color: #080808; 
+    background: #8F00FF;
+}
+
+.home-icons a:hover::before,
+.home-icons a:focus::before { 
+    width: 100%; 
+}
+
+/* KEYFRAMES ANIMATION */
+@keyframes showRight {
+    100% {
+        width: 0;
+    }
+}
+
+
+#About-Me {
+    padding: 80px 0;
+    color: #ababab;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1 {
+    flex-basis: 35%;
+}
+
+.about-col-1 img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.about-col-2 {
+    flex-basis: 60%;
+}
+
+.about-col-2 p {
+    font-size: 20px;
+    margin-top: 15px;
+    text-align: justify;
+    color: #fff;
+}
+
+.about-col-2 h2 {
+    font-size: 24px; 
+    margin-top: 20px; 
+    position: relative;
+    display: inline-block;
+}
+
+
+.about-col-2 h2::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background: #8F00FF; 
+    left: 0;
+    bottom: -5px;
+    transition: width 0.5s ease;
+}
+
+.about-col-2 h2:hover::after {
+    width: 100%;
+}
+
+.sub-title {
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.tab-titles {
+    display: flex;
+    margin: 20px 0 40px
+}
+
+.tab-links {
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+
+.tab-links a {
+    color: #fff; 
+    text-decoration: none; 
+    position: relative; 
+    cursor: pointer;
+}
+
+.tab-links a:hover::after {
+    width: 100%; 
+}
+
+.tab-links a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #8F00FF; 
+    position: absolute;
+    left: 0; 
+    bottom: -8px; 
+    transition: width 0.5s; 
+}
+
+
+.tab-links.active-link::after {
+    width: 50%;
+}
+
+.tab-contents {
+    display: none; 
+}
+
+.tab-contents.active-tab {
+    display: block; 
+}
+
+.tab-contents:target {
+    display: block; 
+}
+
+.tab-links a:focus {
+    outline: 2px solid #8F00FF;
+}
+
+.tab-contents ul li {
+    list-style: none;
+    margin: 10px 0;
+    line-height: 1.5;
+    color: #fff;
+}
+
+.tab-contents2 ul li {
+    list-style: none;
+    margin: 10px 0;
+    line-height: 1.5;
+}
+
+.tab-contents ul li span {
+    color: #c37ef8;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.tab-contents2 ul li span {
+    color: #c37ef8;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#About-Me, #Education, #Skills, #Contacts {
+    min-height: 100vh; 
+    padding-top: 50px; 
+    padding-bottom: 50px;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 30%;
+    gap: 15px; 
+}
+
+.logo-container img {
+    width: 60px;
+    margin: 0px 15px; 
+    border: 2px solid #8F00FF; 
+    border-radius: 8px; 
+    padding: 8px; 
+    transition: 0.5s ease; 
+}
+
+.logo-container img:hover {
+    background-color: #fff; 
+}
+
+/* SMALL SCREENS RESPONSIVENESS */
+@media (max-width: 768px) {
+    #header {
+        background-image: url("Images/Ramirez Phone background.png");
+    }
+    /* Navigation styles */
+    nav {
+        flex-direction: column; 
+        padding: 10px;
+    }
+
+    nav ul {
+        flex-direction: column; 
+        padding: 0; 
+    }
+
+    nav ul li {
+        margin: 0 15px; 
+        
+    }
+
+    .header-text {
+        margin-top: 20%; 
+        text-align: center; 
+    }
+
+    .header-text h1 {
+        font-size: 30px; 
+    }
+
+    .header-text h3 {
+        font-size: 20px; 
+    }
+
+    .header-text p {
+        font-size: 18px;
+    }
+
+    .header-text .btn-box {
+        flex-direction: column;
+        width: 100%; 
+    }
+
+    .header-text .btn-box a {
+        width: 100%;
+        margin: 5px 0; 
+    }
+
+    .home-icons {
+        bottom: 15px;
+        width: 100%;
+        justify-content: center; 
+    }
+
+    .home-icons a {
+        width: 30px; 
+        height: 30px;
+        margin: 0 15px; 
+    }
+
+    .about-col-1, .about-col-2 {
+        flex: 1 1 100%;
+        margin-bottom: 20px;
+    }
+
+    .about-col-1 img {
+        width: 100%;
+        height: auto;
+    }
+
+    .sub-title {
+        font-size: 24px;
+    }
+
+    .tab-titles p {
+        font-size: 16px;
+    }
+
+    .tab-contents ul li {
+        font-size: 14px;
+    }
+
+    .tab-contents2 ul li {
+        font-size: 14px;
+    }
+
+    .logo-container {
+        display: flex; 
+        flex-wrap: wrap; 
+        justify-content: center; 
+    }
+
+    .logo-container img {
+        width: 70px; 
+        height: auto; 
+        margin: 5px; 
+    }
+
+    .about-col-1 img {
+        width: 100%; 
+        height: auto; 
+    }
+
+    #Contacts {
+        padding: 10px; 
+    }
+
+    #Contacts .about-col-1 {
+        width: 100%;
+    }
+
+    #Contacts .about-col-2 {
+        width: 100%; 
+    }
+
+    #Contacts h1 {
+        font-size: 24px;
+    }
+
+    #Contacts p {
+        font-size: 16px; 
+    }
+
+    #Contacts ul li {
+        font-size: 14px; 
+    }
+}
+
+@media (max-width: 480px) {
+    .header-text h1 {
+        font-size: 24px; 
+    }
+
+    .header-text h3 {
+        font-size: 18px;
+    }
+
+    .header-text p {
+        font-size: 16px;
+    }
+
+    .header-text .btn-box {
+        flex-direction: column;
+    }
+
+    .btn-box a {
+        font-size: 16px; 
+    }
+
+    .home-icons {
+        bottom: 10px; 
+    }
+
+    .tab-contents ul li {
+        font-size: 12px; 
+    }
+
+    .tab-contents2 ul li {
+        font-size: 12px; 
+    }
+}
